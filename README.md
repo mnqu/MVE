@@ -16,9 +16,9 @@ After installing the two packages and modifying the package paths, users may go 
 ## Data
 The MVE model receives a multi-view network and a set of labeled nodes as input. 
 
-Each view of the multi-view network is described by a single file. The files of different views should have the same prefix, and the indices should start from 0 to K-1, where K is the number of views. For example, users may describe a multi-view network with three files, "view_0", "view_1", "view_2", where the prefix is "view_" and the number of views is 3. Each view file contains several lines, with each line representing an edge in that view. The format of each line is: <node u> <node v> <weight>, meaning that there is an edge from node <node u> to node <node v> and the weight is <weight>.
+Each view of the multi-view network is described by a single file. The files of different views should have the same prefix, and the indices should start from 0 to K-1, where K is the number of views. For example, users may describe a multi-view network with three files, "view_0", "view_1", "view_2", where the prefix is "view_" and the number of views is 3. Each view file contains several lines, with each line representing an edge in that view. The format of each line is: "u v w", meaning that there is an edge from node "u" to node "v" and the weight is "w".
 
-The labeled nodes are listed in another file. This file contains several lines, where each line gives the labels of a node. The format of a line is: <node name> <label name 1> <label name 2>, which starts with the name of the node, followed by the names of different labels the node has.
+The labeled nodes are listed in another file. This file contains several lines, where each line gives the labels of a node. The format of a line is: "node_name label_name_1 label_name_2", which starts with the name of the node, followed by the names of different labels the node has.
 
 A toy dataset is provided in the "data/toy/" folder, and we will upload the dataset used in the paper later.
 
