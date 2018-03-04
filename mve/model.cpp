@@ -12,9 +12,9 @@
 #define MAX_STRING 100
 #define MAX_VIEW 10
 
-const int hash_size = 30000000;  // Maximum 30 * 0.7 = 21M words in the vocabulary
+const int hash_size = 30000000;
 
-typedef float real;                    // Precision of float numbers
+typedef float real;
 
 typedef Eigen::Matrix< real, Eigen::Dynamic,
 Eigen::Dynamic, Eigen::RowMajor | Eigen::AutoAlign >
@@ -287,7 +287,7 @@ void read_string(char *string, FILE *fi)
         }
         string[a] = ch;
         a++;
-        if (a >= MAX_STRING - 1) a--;   // Truncate too long words
+        if (a >= MAX_STRING - 1) a--;
     }
     string[a] = 0;
 }
@@ -344,17 +344,6 @@ void learn_vocab()
             {
                 a = node.add(string2);
             }
-            //if (i == -1)
-            //{
-            //    a = node.add(string2);
-            //    node.node[a].degree = weight;
-            //    node.node[a].degree_view[view] += weight;
-            //}
-            //else
-            //{
-            //    node.node[i].degree += weight;
-            //    node.node[i].degree_view[view] += weight;
-            //}
         }
         fclose(fi);
     }
