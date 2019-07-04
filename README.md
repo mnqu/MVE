@@ -20,7 +20,7 @@ Each view of the multi-view network is described by a single file. The files of 
 
 The labeled nodes are listed in another file. This file contains several lines, where each line gives the labels of a node. The format of a line is: "node_name label_name_1 label_name_2", which starts with the name of the node, followed by the names of different labels the node has.
 
-A toy dataset is provided in the "data/toy/" folder, and we will upload the dataset used in the paper later.
+A toy dataset is provided in the "data/toy/" folder. For the DBLP, Flickr and Youtube datasets, they are available [here](https://drive.google.com/open?id=1ZqtosERGwVs-MgUKFYATyvYdndOWtWBS).
 
 ## Running
 To run the MVE model, users may directly use the example script (run.sh) we provide. 
